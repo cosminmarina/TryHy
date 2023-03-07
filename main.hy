@@ -1,7 +1,5 @@
 ;;; Imports
 (import matplotlib.pyplot :as plt)
-;(import numpy :as np)
-;(import pandas :as pd)
 (import sklearn [datasets]
         sklearn.ensemble [RandomForestClassifier]
         sklearn.model_selection [train_test_split]
@@ -35,7 +33,7 @@
           conf_mat (ConfusionMatrixDisplay.from_predictions y_test y_predict)
          ]
     (plt.title clf)
-    (print f"\n Precision: {precision} \n Recall: {recall} \n F1: {f1} \n PRFS: {prfs}")
+    (print f"\n\n Classifier {clf}\n ------------ \n Precision: {precision} \n Recall: {recall} \n F1: {f1} \n PRFS: {prfs}")
     (return y_predict)
     )
 )
